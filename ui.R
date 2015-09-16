@@ -14,10 +14,10 @@ shinyUI(
                 choices = c("City Center", "North Suburbs", "South Suburbs")),
     br(),
     checkboxGroupInput("type", "What property are you looking for?:",
-                 c("Flat" = "flat",
-                      "House" = "house",
-                      "Maisonette" = "maisonette",
-                      "Other" = "other"), selected="flat"),
+                 c("Flat" = "Flat",
+                      "House" = "House",
+                      "Maisonette" = "Maisonette",
+                      "Other" = "Other"), selected="Flat"),
    
     sliderInput("rooms", "How many rooms you'd like?:",
                 min = 1, max = 10, value = c(1,10)),
@@ -33,6 +33,7 @@ shinyUI(
     h2('Budget Prediction '),
     h3('We are giving you a prediction for a budget in '),
     h3(textOutput('area')),
+    h3(textOutput('surface')),
     br(),
     h3('Your estimated budget is '),
     h2(textOutput('prediction'))

@@ -46,6 +46,6 @@ shinyUI(
    tags$i(tags$b("Disclaimer")),
    tags$i('The above results are based on market data from January 2014.The data sample is limited and therefore results are only for demonstration purposes.'),
    br(),
-   tags$a()
+   tags$a(href="https://www.linkedin.com/in/psyllidou", "For any questions, click to contact me!")
   )
   ))

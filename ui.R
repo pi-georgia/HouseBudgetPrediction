@@ -31,16 +31,11 @@ shinyUI(
   # number of observations
   mainPanel(
     h2('Budget Prediction '),
+    h3('We are giving you a prediction for a budget in '),
+    h3(textOutput('area')),
+    h3(textOutput('surface')),
     br(),
-    h4(textOutput('commarea')),
-    h4(textOutput('area')),
-    h5(textOutput('commsurface')),
-    br(),
-  
-    h4(textOutput('pred_range')),
-    plotOutput("HistChart"),
-  
-    br()
-    
+    h3('Your estimated budget is '),
+    h2(textOutput('prediction'))
   )
   ))

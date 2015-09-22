@@ -2,7 +2,7 @@ library(shiny)
 # Define UI for dataset viewer application
 
 shinyUI(
-  pageWithSidebar(
+  fluidPage(theme = "bootstrap.css",
   
   # Application title
   headerPanel("Real-Estate Budget Helper"),
@@ -40,7 +40,12 @@ shinyUI(
     h4(textOutput('pred_range')),
     plotOutput("HistChart"),
   
-    br()
-    
+    br(),
+    br(),
+    br(),
+   tags$i(tags$b("Disclaimer")),
+   tags$i('The above results are based on market data from January 2014.The data sample is limited and therefore results are only for demonstration purposes.'),
+   br(),
+   tags$a()
   )
   ))

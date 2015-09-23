@@ -5,8 +5,10 @@ houseBudget <- function(area="City Center", surface_min=30,surface_max=100, room
   data<-read.csv('housedata.csv')
   prediction<-c(150,200) ;  price_min<-0 ;  price_max<-0
   pred_data<- subset(data,(Area==area) &(Type %in% type)&(Surface >=surface_min) & (Surface <= surface_max),select=c(Price, Psqm, Type))
-  price_min<- mean(pred_data$Price) - sd(pred_data$Price)
-  price_max<- mean(pred_data$Price) +  sd(pred_data$Price)
+ #Plot confidence intervals
+  CI <- t.test(pred_data$Price)
+  price_min<- CI$conf[1]
+  price_max<- CI$conf[2]
   
   #return list of boundaries as well as data for plotting
  prediction <- list(round(price_min), round(price_max), pred_data$Price, pred_data$Psqm, pred_data$Type)

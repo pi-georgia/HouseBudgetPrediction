@@ -5,7 +5,7 @@ shinyUI(
   fluidPage(theme = "bootstrap.css",
   
   # Application title
-  headerPanel("Real-Estate Budget Planner"),
+  headerPanel("Home Budget Planner"),
   
   # Sidebar with controls to select a dataset and specify the number
   # of observations to view
@@ -30,7 +30,7 @@ shinyUI(
   # Show a summary of the dataset and an HTML table with the requested
   # number of observations
   mainPanel(
-    h3('Budget Prediction '),
+    h3('Home Budget Prediction '),
     br(),
     tags$b(textOutput('commarea')),
     tags$b(textOutput('area')),

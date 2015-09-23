@@ -35,7 +35,7 @@ shinyServer(
     output$surface <- renderText({input$surface})
     output$commsurface <- renderText({paste("Your range in terms of habitable space is ",input$surface[1], "to ",  input$surface[2]) })
     output$commarea <- renderText({c("You are looking in ",input$area, "for the following types of assets : "  )})
-    output$pred_range <-renderText({ paste(" Your estimated budget ranges from", pred_results()[[1]] , " to ", pred_results()[[2]], " EUR" ) })
+    output$pred_range <-renderText({ paste(" Your estimated budget ranges from", pred_results()[[1]] , " EUR to ", pred_results()[[2]], " EUR" ) })
 
     # Plot the distribution of prices and guidelines, as well as other informative plots
     output$HistChart<- renderPlot({
